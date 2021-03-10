@@ -1,0 +1,15 @@
+[INPUT]
+cvfile = aaaaa_{}.out
+targetfile = bbbbb_{}.out
+
+[OUTPUT]
+weightfile = bbbbb_{}.weight
+fenefile = bbbbb.fene
+
+[MBAR]
+#self_iteration = 40
+num_replicas = nnnnn
+input_type = MBGO
+temperature = ttttt
+target_temperature = ttttt
+dimension = 1

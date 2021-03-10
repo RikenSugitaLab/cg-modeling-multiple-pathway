@@ -1,0 +1,23 @@
+# control parameters in pmf_analysis
+ 
+[INPUT]
+cvfile         = aaaaa_{}.out
+weightfile     = bbbbb_{}.weight
+ 
+[OUTPUT]
+pmffile        = bbbbb_2d.pmf
+ 
+[OPTION]
+nreplica       = nnnnn
+dimension      = 2
+temperature    = ttttt
+#cutoff         = 100 # cutoff distance measured by pathcv_analysis
+#grids1         = 0.0 16.0 50  # (min max num_of_bins)
+grids1         = mmmmm xxxxx iiiii  # (min max num_of_bins)
+grids2         = lllll yyyyy jjjjj  # (min max num_of_bins)
+band_width1    = 0.1 # sigma of Gaussian kernel
+band_width2    = 0.1 # sigma of Gaussian kernel
+is_periodic1   = NO
+is_periodic2   = NO
+#box_size1      = 360.0
+

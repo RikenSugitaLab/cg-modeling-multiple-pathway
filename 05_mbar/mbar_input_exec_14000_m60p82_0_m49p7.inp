@@ -1,0 +1,15 @@
+[INPUT]
+cvfile = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_xxx_12000_xxx_0_m50p5_ene_permute_{}.out
+targetfile = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_xxx_12000_xxx_0_m50p5_ene_target_14000_m60p82_0_m49p7_{}.out
+
+[OUTPUT]
+weightfile = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_xxx_12000_xxx_0_m50p5_ene_target_14000_m60p82_0_m49p7_{}.weight
+fenefile = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_xxx_12000_xxx_0_m50p5_ene_target_14000_m60p82_0_m49p7.fene
+
+[MBAR]
+#self_iteration = 40
+num_replicas = 16
+input_type = MBGO
+temperature = 200
+target_temperature = 200
+dimension = 1
