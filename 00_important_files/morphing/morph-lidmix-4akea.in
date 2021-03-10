@@ -1,0 +1,26 @@
+# control parameters in morph_generator
+ 
+[INPUT]
+reffile        = GO_4akea.pdb
+pdbfile        = lidmix.pdb
+grotopfile     = GO_DoME_TB_4akea_1akea_0p6dc_2p6cr_lid_intra_mixed.grotop
+ 
+[OUTPUT]
+morphfile      = lidmix-4akea.mor    # Morphing file
+ 
+[SELECTION]
+ group1         = all
+# group2         = not backbone    # atom group 2
+
+[OPTION]
+check_only     = NO             # (YES/NO)
+pbc_correct            = NO      
+ignore_hydrogen        = NO      
+avoid_bonding          = YES     
+exclude_residues       = 0
+minimum_distance       = 1.0
+maximum_distance       = 50.0
+minimum_difference     = 5.0
+contact_groups         = 1
+exclude_residues       = 4
+
