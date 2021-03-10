@@ -1,4 +1,4 @@
-01_morph_param: files for preparing morphing input files   
+files for preparing morphing input files   
 ###############  
 .pdb files: structure files of the Open, Closed and (estimated) intermediate structures  
 .in: files: input files for creating morphing simulation input file  
