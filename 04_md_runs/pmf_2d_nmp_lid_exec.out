@@ -1,0 +1,69 @@
+****************************************************
+*                                                  *
+*                   PMF_ANALYSIS                   *
+*                                                  *
+*        Utility to analyze trajectory files       *
+*                                                  *
+*              Developed by RIKEN AICS             *
+*                                                  *
+****************************************************
+ 
+[STEP1] Read Control Parameters for Analysis
+ 
+Read_Ctrl_Input> Input Files
+  cvfile          = ang-nmp_ang-lid_DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_{}.out
+  weightfile      = /home/shinobuai/cg_mix/adk/11-multibasin-mbar/03-mdruns-manual/scripts/all_2500_{}.weight
+ 
+Read_Ctrl_Output> Output Files
+  pmffile         = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_nmp_lid_2d.pmf
+ 
+Read_Ctrl_Option> Parameters of OPTION
+
+  check only      = no
+  allow backup    = no
+     dimension    =          2
+     nreplica     =          1
+     temperature  =     200.00
+     cutoff       =       0.00
+   dimension :               1
+     grids        = 30 90 60
+     band_width   =       0.10
+     is_periodic  = no
+
+   dimension :               2
+     grids        = 80 200 120
+     band_width   =       0.10
+     is_periodic  = no
+
+
+[STEP2] Set Relevant Variables and Structures
+ 
+Setup_Option> centers of grids in dimension   1
+   30.5085   31.5254   32.5424   33.5593   34.5763   35.5932   36.6102   37.6271   38.6441   39.6610   40.6780   41.6949   42.7119   43.7288   44.7458   45.7627   46.7797   47.7966   48.8136   49.8305   50.8475   51.8644   52.8814   53.8983   54.9153   55.9322   56.9492   57.9661   58.9831   60.0000   61.0169   62.0339   63.0508   64.0678   65.0847   66.1017   67.1186   68.1356   69.1525   70.1695   71.1864   72.2034   73.2203   74.2373   75.2542   76.2712   77.2881   78.3051   79.3220   80.3390   81.3559   82.3729   83.3898   84.4068   85.4237   86.4407   87.4576   88.4746   89.4915 
+ 
+Setup_Option> centers of grids in dimension   2
+   80.5042   81.5126   82.5210   83.5294   84.5378   85.5462   86.5546   87.5630   88.5714   89.5798   90.5882   91.5966   92.6050   93.6134   94.6218   95.6303   96.6387   97.6471   98.6555   99.6639  100.6723  101.6807  102.6891  103.6975  104.7059  105.7143  106.7227  107.7311  108.7395  109.7479  110.7563  111.7647  112.7731  113.7815  114.7899  115.7983  116.8067  117.8151  118.8235  119.8319  120.8403  121.8487  122.8571  123.8655  124.8739  125.8824  126.8908  127.8992  128.9076  129.9160  130.9244  131.9328  132.9412  133.9496  134.9580  135.9664  136.9748  137.9832  138.9916  140.0000  141.0084  142.0168  143.0252  144.0336  145.0420  146.0504  147.0588  148.0672  149.0756  150.0840  151.0924  152.1008  153.1092  154.1176  155.1261  156.1345  157.1429  158.1513  159.1597  160.1681  161.1765  162.1849  163.1933  164.2017  165.2101  166.2185  167.2269  168.2353  169.2437  170.2521  171.2605  172.2689  173.2773  174.2857  175.2941  176.3025  177.3109  178.3193  179.3277  180.3361  181.3445  182.3529  183.3613  184.3697  185.3782  186.3866  187.3950  188.4034  189.4118  190.4202  191.4286  192.4370  193.4454  194.4538  195.4622  196.4706  197.4790  198.4874  199.4958 
+ 
+ 
+[STEP3] Analysis trajectory files
+ 
+Check_File_Lines>
+    file name   : /home/shinobuai/cg_mix/adk/11-multibasin-mbar/03-mdruns-manual/scripts/all_2500_1.weight
+    # of line   : 2500
+
+Check_File_Lines>
+    file name   : ang-nmp_ang-lid_DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_1.out
+    # of line   : 2500
+
+Check_File_Column>
+    file name   : ang-nmp_ang-lid_DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_1.out
+    # of column : 3
+
+
+Analyze> Detailed information in the output files
+
+  [pmffile] DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_nmp_lid_2d.pmf
+    Row X and Column Y: free energy profile at a bin center located at center(X,Y)
+
+[STEP4] Deallocate memory
+ 

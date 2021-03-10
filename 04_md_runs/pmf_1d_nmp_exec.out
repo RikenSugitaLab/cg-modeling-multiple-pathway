@@ -1,0 +1,62 @@
+****************************************************
+*                                                  *
+*                   PMF_ANALYSIS                   *
+*                                                  *
+*        Utility to analyze trajectory files       *
+*                                                  *
+*              Developed by RIKEN AICS             *
+*                                                  *
+****************************************************
+ 
+[STEP1] Read Control Parameters for Analysis
+ 
+Read_Ctrl_Input> Input Files
+  cvfile          = ang-nmp_DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_{}.out
+  weightfile      = /home/shinobuai/cg_mix/adk/11-multibasin-mbar/03-mdruns-manual/scripts/all_2500_{}.weight
+ 
+Read_Ctrl_Output> Output Files
+  pmffile         = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_ang_nmp_1d.pmf
+ 
+Read_Ctrl_Option> Parameters of OPTION
+
+  check only      = no
+  allow backup    = no
+     dimension    =          1
+     nreplica     =          1
+     temperature  =     200.00
+     cutoff       =       0.00
+   dimension :               1
+     grids        = 30 90 60
+     band_width   =       0.10
+     is_periodic  = no
+
+
+[STEP2] Set Relevant Variables and Structures
+ 
+Setup_Option> centers of grids in dimension   1
+   30.5085   31.5254   32.5424   33.5593   34.5763   35.5932   36.6102   37.6271   38.6441   39.6610   40.6780   41.6949   42.7119   43.7288   44.7458   45.7627   46.7797   47.7966   48.8136   49.8305   50.8475   51.8644   52.8814   53.8983   54.9153   55.9322   56.9492   57.9661   58.9831   60.0000   61.0169   62.0339   63.0508   64.0678   65.0847   66.1017   67.1186   68.1356   69.1525   70.1695   71.1864   72.2034   73.2203   74.2373   75.2542   76.2712   77.2881   78.3051   79.3220   80.3390   81.3559   82.3729   83.3898   84.4068   85.4237   86.4407   87.4576   88.4746   89.4915 
+ 
+ 
+[STEP3] Analysis trajectory files
+ 
+Check_File_Lines>
+    file name   : /home/shinobuai/cg_mix/adk/11-multibasin-mbar/03-mdruns-manual/scripts/all_2500_1.weight
+    # of line   : 2500
+
+Check_File_Lines>
+    file name   : ang-nmp_DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_1.out
+    # of line   : 2500
+
+Check_File_Column>
+    file name   : ang-nmp_DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_1.out
+    # of column : 2
+
+
+Analyze> Detailed information in the output files
+
+  [pmffile] DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_ang_nmp_1d.pmf
+    Column 1: coordinates of bin centers
+    Column 2: Free energy profile at the corresponding bin
+
+[STEP4] Deallocate memory
+ 
