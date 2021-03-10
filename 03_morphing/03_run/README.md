@@ -4,11 +4,11 @@ file list:
 #########  
 1akea-lidmix.mor: morphing parameter files for the Closed -> lid-closing-intermediate subpath  
 lidmix-1akea.mor: morphing parameter files for the lid-closing-intermediate subpath -> Closed subpath (reverse subpath)  
-GO_1akea.pdb: structure file for Closed structure  
+GO_1akea.pdb: structure file for Closed structure   
 lidmix.pdb: structure file for the (estimated) lid-closing-intermediate structure  
 GO_DoME_TB_4akea_1akea_0p6dc_2p6cr_lid_intra_mixed.grotop: triple-basin parameter file for the morphing simulation  
-morph_3basin_temp.inp: template file of input file for morphing simulations  
-run_morph_temp.sh: template file for submitting morphing runs  
+morph_3basin_temp.inp: template file of input file for morphing simulations   
+run_morph_temp.sh: template file for submitting morphing runs   
 mixing_check_climber.pl: script for extracting basin contribution data and transition quality from morphing simulations  
 
 Sample files shown only for round03 (last round)  
