@@ -7,6 +7,7 @@ Ai Shinobu,1 Chigusa Kobayashi,2 Yasuhiro Matsunaga,3 and Yuji Sugita,1,2,4
 The repository contains the following dorectories: 
 
 00_important_files
+
 01_model
 02_motion_tree
 03_morphing
