@@ -14,7 +14,7 @@ The repository contains the following dorectories:
 05_mbar  
 06_sampling_analysis  
 
-* Most important files were placed in "00_important_files", whereas more specific data for each part was placed in 01~06 directories.
-README files were placed under each directory to describe its content. 
-Due to the large number of simulation rounds in some cases, only smaple files were deposited. 
-Trajectory files were not included due to their large size. 
+* Most important files were placed in "00_important_files", whereas more specific data for each part was placed in 01~06 directories.  
+README files were placed under each directory to describe its content.  
+Due to the large number of simulation rounds in some cases, only smaple files were deposited.  
+Trajectory files were not included due to their large size.  
