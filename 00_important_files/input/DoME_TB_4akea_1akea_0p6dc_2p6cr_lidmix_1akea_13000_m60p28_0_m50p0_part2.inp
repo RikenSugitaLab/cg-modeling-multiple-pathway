@@ -1,0 +1,48 @@
+[INPUT]
+grotopfile = ../../DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix.grotop
+psffile = ../../GO_1akea.psf
+pdbfile = ../../GO_1akea.pdb
+rstfile = ../../round41/DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_13000_m60p28_0_m50p0/DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_13000_m60p28_0_m50p0.rst
+[OUTPUT]
+dcdfile = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_13000_m60p28_0_m50p0.dcd
+rstfile = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_13000_m60p28_0_m50p0.rst
+
+[ENERGY]
+forcefield      = KBGO
+electrostatic   = CUTOFF
+switchdist      = 19.9                       # switch distance
+cutoffdist      = 20.0                       # cutoff distance
+pairlistdist    = 50.0                       # pair-list cutoff distance
+output_style  = GENESIS
+water_model   = NONE
+num_basins	= 3
+mix_temperature	= 13000
+basinenergy1	= -60.28
+basinenergy2	= 0
+basinenergy3	= -50.0
+
+[DYNAMICS]
+integrator      = VVER                        # [LEAP,VVER]
+nsteps = 100000000
+timestep        = 0.020                       # timestep (ps)
+eneout_period = 10000
+rstout_period = 10000
+crdout_period = 10000
+nbupdate_period = 10
+stoptr_period	= 1
+
+[CONSTRAINTS]
+rigid_bond      = YES                         # constraints all bonds
+fast_water      = NO                          # settle constraint
+shake_tolerance = 1.0e-6                      # tolerance (Angstrom)
+
+[ENSEMBLE]
+ensemble        = NVT                         # [NVE,NVT,NPT]
+tpcontrol       = LANGEVIN		      # thermostat
+temperature     = 200                         # initial and target
+gamma_t       = 0.001     # thermostat friction (ps-1) in [LANGEVIN]
+                                              # temperature (K)
+[BOUNDARY]
+type            = NOBC                        # [PBC, NOBC]
+
+ 
