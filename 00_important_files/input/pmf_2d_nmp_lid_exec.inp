@@ -1,0 +1,23 @@
+# control parameters in pmf_analysis
+ 
+[INPUT]
+cvfile         = ang-nmp_ang-lid_DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_{}.out
+weightfile     = /home/shinobuai/cg_mix/adk/11-multibasin-mbar/03-mdruns-manual/scripts/all_2500_{}.weight
+ 
+[OUTPUT]
+pmffile        = DoME_TB_4akea_1akea_0p6dc_2p6cr_lidmix_1akea_12000_m60p75_0_m50p5_nmp_lid_2d.pmf
+ 
+[OPTION]
+nreplica       = 1
+dimension      = 2
+temperature    = 200
+#cutoff         = 100 # cutoff distance measured by pathcv_analysis
+#grids1         = 0.0 16.0 50  # (min max num_of_bins)
+grids1         = 30 90 60  # (min max num_of_bins)
+grids2         = 80 200 120  # (min max num_of_bins)
+band_width1    = 0.1 # sigma of Gaussian kernel
+band_width2    = 0.1 # sigma of Gaussian kernel
+is_periodic1   = NO
+is_periodic2   = NO
+#box_size1      = 360.0
+
