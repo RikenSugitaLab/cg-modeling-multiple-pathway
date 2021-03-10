@@ -1,0 +1,46 @@
+[INPUT]
+psffile        = ../../../00-param/GO_4akea.psf
+reffile        = ../../../00-param/GO_4akea.pdb
+#indexfile      = input.idx       # Index file
+ 
+[OUTPUT]
+indexfile      = adk-tb-dome-dc-0p6-cr-2p6-intra-yes-mix-nmp-15000-0-0-m100.idx
+pdbfile        = adk-tb-dome-dc-0p6-cr-2p6-intra-yes-mix-nmp-15000-0-0-m100_{}.pdb
+trjfile        = adk-tb-dome-dc-0p6-cr-2p6-intra-yes-mix-nmp-15000-0-0-m100_{}.dcd
+ 
+[TRAJECTORY]
+trjfile1       = ../../runs/intra-yes-mix-nmp/1akea/adk-tb-dome-dc-0p6-cr-2p6-intra-yes-mix-nmp-1akea-15000-0-0-m100.dcd
+trjfile2       = ../../runs/intra-yes-mix-nmp/4akea/adk-tb-dome-dc-0p6-cr-2p6-intra-yes-mix-nmp-4akea-15000-0-0-m100.dcd
+md_step1       = 25000000
+mdout_period1  = 10000
+ana_period1    = 10000
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+#trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_type       = COOR
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+#group1         = segid:PROA      # selection group 1
+#group2         = an:CA           # selection group 2
+group1         = all
+group2         = all
+
+ 
+[FITTING]
+fitting_method = TR+ROT          # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+fitting_atom   = 2               # atom group
+mass_weight    = yes              # mass-weight is not applied
+ 
+[OPTION]
+check_only      = NO             # only checking input files (YES/NO)
+analysis_atom   = 1              # target atoms for the cluster analysis
+num_clusters    = 10             # number of clusters
+max_iteration   = 100            # max number of iterations for k-means algorithm
+stop_threshold  = 98.0           # stop threshold of convergence (%) for k-means algorithm
+num_iterations  = 10             # number of iterations for calculating averaged coordinates
+trjout_atom     = 1              # atom selection for pdbfile and trjfile
+trjout_format   = DCD            # (PDB/DCD)
+trjout_type     = COOR           # (COOR/COOR+BOX)
+iseed           = 3141592        # random number seed
+
