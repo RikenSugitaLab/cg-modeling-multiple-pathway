@@ -1,0 +1,45 @@
+## Effective node:    1
+@@ Height:  23.3
+@@ Depth:  0
+== Input1 ( Chain-ID: A ) ==
+LL11: A larger part:   176 residues
+LL12: Region:    1  -  120  ,  159  -  214 
+SS11: A smaller part:   38 residues
+SS12: Region:  121  -  158 
+== Input2 ( Chain-ID: A ) ==
+LL21: A larger part:   176 residues
+LL22: Region:    1  -  120  ,  159  -  214 
+SS21: A smaller part:   38 residues
+SS22: Region:  121  -  158 
+//
+
+## Effective node:    2
+@@ Height:  19.7
+@@ Depth:  1
+== Input1 ( Chain-ID: A ) ==
+LL11: A larger part:   146 residues
+LL12: Region:    1  -   29  ,   60  -  120  ,  159  -  214 
+SS11: A smaller part:   30 residues
+SS12: Region:   30  -   59 
+== Input2 ( Chain-ID: A ) ==
+LL21: A larger part:   146 residues
+LL22: Region:    1  -   29  ,   60  -  120  ,  159  -  214 
+SS21: A smaller part:   30 residues
+SS22: Region:   30  -   59 
+//
+
+## Effective node:    3
+@@ Height:   8.4
+@@ Depth:  2
+== Input1 ( Chain-ID: A ) ==
+LL11: A larger part:   117 residues
+LL12: Region:    1  -    6  ,   14  -   29  ,   60  -  114  ,  175  -  214 
+SS11: A smaller part:   29 residues
+SS12: Region:    7  -   13  ,  115  -  120  ,  159  -  174 
+== Input2 ( Chain-ID: A ) ==
+LL21: A larger part:   117 residues
+LL22: Region:    1  -    6  ,   14  -   29  ,   60  -  114  ,  175  -  214 
+SS21: A smaller part:   29 residues
+SS22: Region:    7  -   13  ,  115  -  120  ,  159  -  174 
+//
+
